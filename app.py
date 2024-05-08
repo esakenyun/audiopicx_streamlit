@@ -16,7 +16,7 @@ def main():
     st.set_page_config(page_title="Audio Compression App", page_icon="logo.svg", layout="wide", initial_sidebar_state="collapsed")
 
 
-    st.title("Audio Compression App tess")
+    st.title("Audio Compression App tesss121")
     
     st.markdown("""
         <style>
