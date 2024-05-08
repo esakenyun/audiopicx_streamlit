@@ -85,11 +85,7 @@ def audioCompression():
     bitrate = st.selectbox("Select Bitrate For Compression", ["32k", "64k", "128k", "192k", "256k"])
 
     if upload_file is not None:
-        st.audio(upload_file, format='audio/mp3', start_time=0)
-        st.write("Uploaded File Details:")
-        file_details = {"Filename":upload_file.name,"FileType":upload_file.type,"FileSize":upload_file.size}
-        st.write(file_details)
-        
+        st.audio(upload_file, format='audio/mp3', start_time=0)    
         
         if st.button("Compress"):
             st.write("Compressing...")
