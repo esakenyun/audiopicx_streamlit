@@ -15,30 +15,19 @@ def compress_audio(input_file, bitrate='64k'):
 def main():
     st.set_page_config(page_title="Audio Compression App", page_icon="logo.svg", layout="wide", initial_sidebar_state="collapsed")
 
-    # Custom CSS to change the theme color
-    st.markdown("""
-        <style>
-            body {
-                color: #333;
-                background-color: #f0f0f0;
-            }
-            .sidebar .sidebar-content {
-                background-color: #222;
-            }
-            .sidebar .sidebar-content .block-container {
-                color: #fff;
-            }
-            .css-17eq0hr {
-                color: #000;
-                background-color: #ccc;
-            }
-        </style>
-    """, unsafe_allow_html=True)
 
     st.title("Audio Compression App")
     
+    st.markdown("""
+        <style>
+            .sidebar .sidebar-content {
+                background-color: #1BB3FF; /* Ubah warna latar belakang sidebar di sini */
+            }
+        </style>
+    """, unsafe_allow_html=True)
+    
     # Sidebar
-    st.sidebar.image("logo.svg", width=100)
+    st.sidebar.image("logo.svg", width=200)
     
     # Main content
     st.write("""
