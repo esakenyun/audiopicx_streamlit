@@ -94,6 +94,14 @@ def audioCompression():
             st.write("Download Compressed Audio")
             st.download_button(label='Download', data=output_buffer, file_name='compressed_audio.mp3', mime='audio/mp3')
 
+def videoCompression():
+    st.title("Video Compression 📽️")
+    st.write("""
+    With the latest video compression technology, your storage capacity is optimized!
+    """)
+
+    upload_file = st.file_uploader("Upload an Video File for Compression", type=["mp4"])
+
 # Main function
 def main():
     st.set_page_config(page_title="AudioPicX", page_icon="./images/logo.svg", layout="wide", initial_sidebar_state="collapsed")
@@ -101,7 +109,7 @@ def main():
     # Sidebar
     st.sidebar.image("./images/logo.svg", width=200)
     st.sidebar.success("Select Your Page ⬇️")
-    page = st.sidebar.selectbox("Select Page", ["Home", "Image Compression", "Audio Compression"])
+    page = st.sidebar.selectbox("Select Page", ["Home", "Image Compression", "Audio Compression", "Video Compression"])
 
     if page == "Home":
         home()
@@ -109,6 +117,9 @@ def main():
         imageCompression()
     elif page == "Audio Compression":
         audioCompression()
+    elif page == "Video Compression":
+        videoCompression()
+
 
 # Run the app
 if __name__ == '__main__':
